@@ -1,0 +1,340 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">John Victor</div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Hi, I'm <span>John Victor</span></h1>
+        <p class="hero-subtitle">Software Engineer</p>
+        <p class="hero-description">I create secure and functional websites</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="profile-pic">
+          <img src="{% static 'images/profile.jpg'%}" alt="Profile Picture" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm a passionate web developer with expertise in creating modern,
+              responsive websites. I love turning ideas into reality through
+              code and design while maintaining it's security.
+            </p>
+            <p>
+              With a background in both frontend and backend development, I
+              bring a comprehensive approach to every project I work on.
+            </p>
+            <div class="about-stats">
+              <div class="stat">
+                <h3>1</h3>
+                <p>Project(s) Completed</p>
+              </div>
+              <div class="stat">
+                <h3>3+</h3>
+                <p>Years Experience</p>
+              </div>
+              <div class="stat">
+                <h3>2</h3>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="{% static 'images/portfolio.png' %}" alt="Portfolio" />
+              <div class="project-overlay">
+                <a href="#" class="project-link"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+                <a href="#" class="project-link"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Portfolio Website</h3>
+              <code>In Dev</code>
+              <p>A modern portfolio showcasing design and development skills</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="{% static 'images/chomply.png' %}" alt="Project 1" />
+              <div class="project-overlay">
+                <a
+                  href="https://chomply.online"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+                <a
+                  href="https://github.com/JohnExho/Dental_And_Billing_System"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Dental Management System</h3>
+              <p>
+                an all-in-one digital platform that streamlines clinic
+                operations by managing patient records, appointments, billing,
+                and treatment histories in one secure place, improving
+                efficiency, accuracy, and patient care.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Laravel</span>
+                <span>Python</span>
+                <span>MySql</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="https://placehold.co/400x250"
+                alt="Point Of Sale and Inventory SaaS"
+              />
+              <div class="project-overlay">
+                <a href="#" class="project-link"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+                <a href="#" class="project-link"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Point Of Sale and Inventory SaaS</h3>
+              <code>In Dev</code>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+                <span>Django</span>
+                <span>Postgre</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span>JavaScript</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="35%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>CSS3</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="45%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>HTML5</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span>Python</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="40%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Node.js</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="70%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>MySql</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="70%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Laravel</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<<!-- Contact Section - Fixed Structure -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        
+        <!-- Introductory Text - Separate from grid -->
+        <div class="contact-intro">
+            <h3>Let's work together</h3>
+            <p>
+                I'm always interested in new opportunities and collaborations.
+                Feel free to reach out!
+            </p>
+        </div>
+
+        <div class="contact-content">
+            <!-- Left side - Contact Methods -->
+            <div class="contact-methods">
+                <!-- Primary Email Link -->
+                <a
+                    href="mailto:rci.bsis.hensonjohnvictor@gmail.com?subject=Portfolio Inquiry&body=Hi Victor,%0D%0A%0D%0AI visited your portfolio and would like to connect.%0D%0A%0D%0ABest regards,"
+                    class="contact-method primary"
+                >
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-details">
+                        <span class="label">Email Me</span>
+                        <span class="value">rci.bsis.hensonjohnvictor@gmail.com</span>
+                    </div>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+
+                <!-- Alternative Contact Methods -->
+                <a
+                    href="mailto:rci.bsis.hensonjohnvictor@gmail.com?subject=Quick Question"
+                    class="contact-method"
+                >
+                    <i class="fas fa-comment-dots"></i>
+                    <div class="contact-details">
+                        <span class="label">Quick Question</span>
+                        <span class="value">Send a quick email</span>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <!-- Calendar Link -->
+                <a
+                    href="mailto:rci.bsis.hensonjohnvictor@gmail.com?subject=Meeting Request&body=Hi Victor,%0D%0A%0D%0AI'd like to schedule a meeting to discuss a potential project.%0D%0A%0D%0APlease let me know your availability.%0D%0A%0D%0AThank you!"
+                    class="contact-method"
+                >
+                    <i class="fas fa-calendar-alt"></i>
+                    <div class="contact-details">
+                        <span class="label">Schedule Meeting</span>
+                        <span class="value">Book a consultation</span>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Right side - Visual/Illustration + Social Links -->
+            <div class="contact-visual">
+                <div class="email-illustration">
+                    <i class="fas fa-paper-plane"></i>
+                    <h4>Ready to connect?</h4>
+                    <p>Click any email link to open your default email client</p>
+                </div>
+                
+                <!-- Social Links - HORIZONTAL under illustration -->
+                <div class="social-links-horizontal">
+                    <a href="#" target="_blank" rel="noreferrer noopener" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/JohnExho" target="_blank" rel="noreferrer noopener" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.facebook.com/EbiEbiEcho" target="_blank" rel="noreferrer noopener" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/echonomichi/" target="_blank" rel="noreferrer noopener" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
