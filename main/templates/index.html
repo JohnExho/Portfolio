@@ -1,40 +1,14 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-  </head>
-  <body>
+{% block title %}Portfolio{% endblock %}
+{% block content %}
     <!-- Navigation -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <div class="logo">John Victor</div>
-        <ul class="nav-menu">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </nav>
+    {% include 'includes/navbar.html' %}
 
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="hero-content">
-        <h1 class="hero-title">Hi, I'm <span>John Victor</span></h1>
+        <h1 class="hero-title">Hi, I'm <span>John Victor Henson</span></h1>
         <p class="hero-subtitle">Software Engineer</p>
         <p class="hero-description">I create secure and functional websites</p>
         <div class="hero-buttons">
@@ -56,7 +30,7 @@
         <div class="about-content">
           <div class="about-text">
             <p>
-              I'm a passionate web developer with expertise in creating modern,
+              I'm a passionate software  with expertise in creating modern,
               responsive websites. I love turning ideas into reality through
               code and design while maintaining it's security.
             </p>
@@ -92,17 +66,25 @@
             <div class="project-image">
               <img src="{% static 'images/portfolio.png' %}" alt="Portfolio" />
               <div class="project-overlay">
-                <a href="#" class="project-link"
+                <a
+                  href="https://johnexho.pythonanywhere.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
                   ><i class="fas fa-external-link-alt"></i
                 ></a>
-                <a href="#" class="project-link"
+                <a
+                  href="https://github.com/JohnExho/Portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
                   ><i class="fab fa-github"></i
                 ></a>
               </div>
             </div>
             <div class="project-info">
               <h3>Portfolio Website</h3>
-              <code>In Dev</code>
+              <code>In development</code>
               <p>A modern portfolio showcasing design and development skills</p>
               <div class="project-tech">
                 <span>HTML</span>
@@ -167,7 +149,7 @@
             </div>
             <div class="project-info">
               <h3>Point Of Sale and Inventory SaaS</h3>
-              <code>In Dev</code>
+              <code>In development</code>
               <div class="project-tech">
                 <span>HTML</span>
                 <span>CSS</span>
@@ -243,98 +225,111 @@
       </div>
     </section>
 
-<<!-- Contact Section - Fixed Structure -->
-<section id="contact" class="contact">
-    <div class="container">
+    <!-- Contact Section - Fixed Structure -->
+    <section id="contact" class="contact">
+      <div class="container">
         <h2 class="section-title">Get In Touch</h2>
-        
+
         <!-- Introductory Text - Separate from grid -->
         <div class="contact-intro">
-            <h3>Let's work together</h3>
-            <p>
-                I'm always interested in new opportunities and collaborations.
-                Feel free to reach out!
-            </p>
+          <h3>Let's work together</h3>
+          <p>
+            I'm always interested in new opportunities and collaborations. Feel
+            free to reach out!
+          </p>
         </div>
 
         <div class="contact-content">
-            <!-- Left side - Contact Methods -->
-            <div class="contact-methods">
-                <!-- Primary Email Link -->
-                <a
-                    href="mailto:rci.bsis.hensonjohnvictor@gmail.com?subject=Portfolio Inquiry&body=Hi Victor,%0D%0A%0D%0AI visited your portfolio and would like to connect.%0D%0A%0D%0ABest regards,"
-                    class="contact-method primary"
-                >
-                    <i class="fas fa-envelope"></i>
-                    <div class="contact-details">
-                        <span class="label">Email Me</span>
-                        <span class="value">rci.bsis.hensonjohnvictor@gmail.com</span>
-                    </div>
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
+          <!-- Left side - Contact Methods -->
+          <div class="contact-methods">
+            <!-- Primary Email Link -->
+            <a
+              href="mailto:rci.bsis.hensonjohnvictor@gmail.com?subject=Portfolio Inquiry&body=Hi Victor,%0D%0A%0D%0AI visited your portfolio and would like to connect.%0D%0A%0D%0ABest regards,"
+              class="contact-method primary"
+            >
+              <i class="fas fa-envelope"></i>
+              <div class="contact-details">
+                <span class="label">Email Me</span>
+                <span class="value">rci.bsis.hensonjohnvictor@gmail.com</span>
+              </div>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
 
-                <!-- Alternative Contact Methods -->
-                <a
-                    href="mailto:rci.bsis.hensonjohnvictor@gmail.com?subject=Quick Question"
-                    class="contact-method"
-                >
-                    <i class="fas fa-comment-dots"></i>
-                    <div class="contact-details">
-                        <span class="label">Quick Question</span>
-                        <span class="value">Send a quick email</span>
-                    </div>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+            <!-- Alternative Contact Methods -->
+            <a
+              href="mailto:rci.bsis.hensonjohnvictor@gmail.com?subject=Quick Question"
+              class="contact-method"
+            >
+              <i class="fas fa-comment-dots"></i>
+              <div class="contact-details">
+                <span class="label">Quick Question</span>
+                <span class="value">Send a quick email</span>
+              </div>
+              <i class="fas fa-arrow-right"></i>
+            </a>
 
-                <!-- Calendar Link -->
-                <a
-                    href="mailto:rci.bsis.hensonjohnvictor@gmail.com?subject=Meeting Request&body=Hi Victor,%0D%0A%0D%0AI'd like to schedule a meeting to discuss a potential project.%0D%0A%0D%0APlease let me know your availability.%0D%0A%0D%0AThank you!"
-                    class="contact-method"
-                >
-                    <i class="fas fa-calendar-alt"></i>
-                    <div class="contact-details">
-                        <span class="label">Schedule Meeting</span>
-                        <span class="value">Book a consultation</span>
-                    </div>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+            <!-- Calendar Link -->
+            <a
+              href="mailto:rci.bsis.hensonjohnvictor@gmail.com?subject=Meeting Request&body=Hi Victor,%0D%0A%0D%0AI'd like to schedule a meeting to discuss a potential project.%0D%0A%0D%0APlease let me know your availability.%0D%0A%0D%0AThank you!"
+              class="contact-method"
+            >
+              <i class="fas fa-calendar-alt"></i>
+              <div class="contact-details">
+                <span class="label">Schedule Meeting</span>
+                <span class="value">Book a consultation</span>
+              </div>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Right side - Visual/Illustration + Social Links -->
+          <div class="contact-visual">
+            <div class="email-illustration">
+              <i class="fas fa-paper-plane"></i>
+              <h4>Ready to connect?</h4>
+              <p>Click any email link to open your default email client</p>
             </div>
 
-            <!-- Right side - Visual/Illustration + Social Links -->
-            <div class="contact-visual">
-                <div class="email-illustration">
-                    <i class="fas fa-paper-plane"></i>
-                    <h4>Ready to connect?</h4>
-                    <p>Click any email link to open your default email client</p>
-                </div>
-                
-                <!-- Social Links - HORIZONTAL under illustration -->
-                <div class="social-links-horizontal">
-                    <a href="#" target="_blank" rel="noreferrer noopener" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/JohnExho" target="_blank" rel="noreferrer noopener" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.facebook.com/EbiEbiEcho" target="_blank" rel="noreferrer noopener" class="social-link">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/echonomichi/" target="_blank" rel="noreferrer noopener" class="social-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
+            <!-- Social Links - HORIZONTAL under illustration -->
+            <div class="social-links-horizontal">
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/JohnExho"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="social-link"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/EbiEbiEcho"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="social-link"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/echonomichi/"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="social-link"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
             </div>
+          </div>
         </div>
-    </div>
-</section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
       </div>
-    </footer>
+    </section>
+        <script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
 
-    <script src="{% static 'js/script.js' %}"></script>
-  </body>
-</html>
+

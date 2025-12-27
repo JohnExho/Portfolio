@@ -1,0 +1,52 @@
+{% extends 'securityManagement/base.html' %} 
+{% load static %}
+{% block title %}Login{% endblock %} 
+{% block extra_head %}
+<link
+  rel="stylesheet"
+  {% comment %} href="{% static '/root/css/login.css' %}" {% endcomment %}
+/>
+{% endblock %}
+{% block content%}
+<div class="login-box">
+    <div class="hero"></div>
+    <div class="form-panel">
+  <h1>Login</h1>
+  
+
+  {% if form.errors %}
+  <div class="error">Invalid username or password</div>
+  {% endif %}
+
+  <form method="post">
+    {% csrf_token %}
+
+    <label for="id_username">Username</label>
+    {{ form.username }}
+
+    <label for="id_password">Password</label>
+    <div class="password-wrapper">
+      {{ form.password }}
+      <i
+        class="fa-solid fa-eye toggle-password"
+        onclick="togglePassword()"
+        id="toggleIcon"
+      ></i>
+    </div>
+
+    {% if next %}
+    <input type="hidden" name="next" value="{{ next }}" />
+    {% endif %}
+
+    <button type="submit">Sign in</button>
+    <button type="button" onclick="window.location.href='{% url 'securityManagement:register' %}'">
+      Register
+    </button>
+  </form>
+</div>
+</div>
+{% endblock %} 
+
+{% block extra_js %}
+<script src="{% static 'root/js/login.js' %}"></script>
+{% endblock %}

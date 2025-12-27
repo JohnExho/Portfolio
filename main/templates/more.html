@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}More About JohnEcho{% endblock %}
+{% block extra_head%}
+    <style>
+        .more-info {
+            padding: 20px;
+            margin-top: 3.75rem;
+        }
+        .more-info h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .more-info p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<div class="more-info">
+    <h1>More About JohnEcho</h1>
+    <button class="btn btn-primary">test </button>
+    <p>This page contains additional information about JohnEcho's projects, skills, and experiences.</p>
+    <!-- Add more content as needed -->
+</div>
+{% endblock %}

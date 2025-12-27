@@ -29,18 +29,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background change on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.backdropFilter = 'blur(10px)';
-    } else {
-        navbar.style.background = 'var(--white)';
-        navbar.style.backdropFilter = 'none';
-    }
-});
-
 // Animate skill bars when they come into view
 const observerOptions = {
     threshold: 0.5,
@@ -159,4 +147,10 @@ scrollTopBtn.addEventListener('click', () => {
         top: 0,
         behavior: 'smooth'
     });
+});
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 10);
 });

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    {% block head%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/profile.jpg' %}">
+    <title>{% block title %}My Blog{% endblock %}</title>
+    {% block extra_head %}{% endblock %}
+</head>
+    {% endblock%}
+<body>
+    <nav>
+        {% include 'includes/navbar.html' %}
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="footer">
+        <div class="container">
+        <p>&copy; 2026 My Portfolio</p>
+        </div>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

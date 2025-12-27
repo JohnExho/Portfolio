@@ -1,0 +1,45 @@
+{% extends 'securityManagement/base.html' %} {% load static %} 
+{% block title%}Register{% endblock %} 
+{% block extra_head %}
+{% comment %} <link rel="stylesheet" href="{% static '/root/css/register.css' %}" /> {% endcomment %}
+{% endblock %} 
+{% block content %}
+<div class="register-box">
+  <div class="hero"></div>
+  <div class="form-panel">
+    <h1>Create Account</h1>
+
+    {% if form.errors %}
+    <div class="error">Please fix the errors below.</div>
+    {% endif %}
+
+    <form method="post">
+      {% csrf_token %}
+
+      <label>First Name</label>
+      {{ form.first_name }}
+
+      <label>Middle Name</label>
+      {{ form.middle_name }}
+
+      <label>Last Name</label>
+      {{ form.last_name }}
+
+      <label>Email</label>
+      {{ form.email }}
+
+      <label>Password</label>
+      {{ form.password1 }}
+
+      <label>Confirm Password</label>
+      {{ form.password2 }}
+
+      <button type="submit">Register</button>
+    </form>
+
+    <p style="text-align: center; margin-top: 1rem">
+      Already have an account? <a href="{% url 'securityManagement:login' %}">Login</a>
+    </p>
+  </div>
+</div>
+{% endblock %}
