@@ -1,7 +1,8 @@
 from django.urls import path
 from . import views
 from .views import (
-    HomeView, 
+    HomeView,
+    MoreInfoView, 
 )
 app_name = "main"
 

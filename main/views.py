@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-# Create your views here.
 class HomeView(TemplateView):
     template_name = 'index.html'
 
-class MoreInfoView(TemplateView):
+
+class MoreInfoView(LoginRequiredMixin, TemplateView):
     template_name = 'more.html'
+    login_url = '/security/login/'  # optional but explicit is good

@@ -20,6 +20,7 @@
 /* Smooth scroll behavior for mailto links */
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
@@ -27,12 +28,20 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Make main expand to push footer to the bottom (sticky footer) */
+main {
+    flex: 1 0 auto;
 }
 
 /* Navigation */
@@ -59,6 +68,15 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.logo-image {
+    max-height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -628,10 +646,10 @@ section {
     color: var(--white);
     text-align: center;
     padding: 0.8rem 0;
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100%; */
 }
 
 /* Animations */
