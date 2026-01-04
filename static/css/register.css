@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #bde8f5;
+  --secondary-color: #4988c4;
+  --accent-color: #1c4d8d;
+  --background-color: #0f2854;
+  --text-color: #ffffff;
+  --error-color: #ff6b6b;
+  --success-color: #51cf66;
+}
+
+body {
+  background: linear-gradient(135deg, var(--background-color) 0%, #1a3a6e 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(189, 232, 245, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  top: -250px;
+  right: -250px;
+  animation: float 20s infinite ease-in-out;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(73, 136, 196, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  bottom: -200px;
+  left: -200px;
+  animation: float 15s infinite ease-in-out reverse;
+}
